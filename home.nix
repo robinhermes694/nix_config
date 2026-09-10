@@ -107,6 +107,13 @@ in
     enable = true;
   };
 
+
+  # `ls --color` falls back to a bare built-in palette. This writes ~/.dir_colors
+  programs.dircolors = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   home.file."${starshipTOML}".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/starship.toml";
   home.file."${config.xdg.configHome}/wezterm".source =
