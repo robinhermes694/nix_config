@@ -53,6 +53,8 @@ in
       ZSH_HIGHLIGHT_STYLES[path]='fg=blue,underline'
       ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=yellow'
       ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=yellow'
+      ZSH_HIGHLIGHT_STYLES[default]='fg=white'
+      ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red,bold'
 
       bindkey '^f' autosuggest-accept
       bindkey -v
@@ -92,6 +94,7 @@ in
       push = "git push";
       pull = "git pull";
       m = "git switch main";
+      ls = "ls --color=auto";
       ll = "ls -l";
       la = "ls -la";
       vi = "nvim";
