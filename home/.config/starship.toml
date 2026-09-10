@@ -23,6 +23,8 @@ disabled = true
 [git_branch]
 style = "magenta"
 symbol = ""
+truncation_length = 30
+format = "[$symbol$branch]($style) "
 
 [git_status]
 style = "yellow"
