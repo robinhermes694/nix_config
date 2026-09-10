@@ -39,6 +39,19 @@ in
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     initContent = ''
+      # Set ZSH_HIGHLIGHT_STYLES before zsh-syntax-highlighting is sourced
+      # (home-manager sources the plugin after initContent, so these take effect)
+      typeset -gA ZSH_HIGHLIGHT_STYLES
+      ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
+      ZSH_HIGHLIGHT_STYLES[command]='fg=cyan,underline'
+      ZSH_HIGHLIGHT_STYLES[alias]='fg=cyan,underline'
+      ZSH_HIGHLIGHT_STYLES[builtin]='fg=cyan,underline'
+      ZSH_HIGHLIGHT_STYLES[function]='fg=cyan,underline'
+      ZSH_HIGHLIGHT_STYLES[command_separator]='fg=yellow'
+      ZSH_HIGHLIGHT_STYLES[su]=none
+      ZSH_HIGHLIGHT_STYLES[parent]='fg=magenta'
+      ZSH_HIGHLIGHT_STYLES[path]='fg=cyan,underline'
+
       bindkey '^f' autosuggest-accept
       bindkey -v
       setopt inc_append_history
