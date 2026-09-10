@@ -1,0 +1,62 @@
+add_newline = false
+format = "$directory$git_branch$git_status$cmd_duration$fill$jobs$character"
+
+[character]
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+
+[cmd_duration]
+format = "[$duration]($style) "
+min_time = 3
+style = "yellow"
+
+[directory]
+truncation_length = 4
+truncate_to_repo = true
+style = "cyan"
+truncation_symbol = ""
+
+[fill]
+symbol = " "
+disabled = true
+
+[git_branch]
+style = "magenta"
+symbol = ""
+
+[git_status]
+style = "yellow"
+format="([$all_status$ahead_behind]($style) )"
+ahead = "⇡$count"
+behind = "⇣$count"
+diverged = "⇡$ahead_count⇣$behind_count"
+untracked = "?$count"
+stashed = "*$count"
+modified = "!$count"
+deleted = "-$count"
+renamed = "➜$count"
+conflicted = "═"
+
+[jobs]
+style = "cyan"
+symbol = "parallel_lines "
+
+[python]
+symbol = "🐍 "
+style = "yellow"
+
+[conda]
+symbol = "🧪 "
+style = "green"
+
+[time]
+format = "%H:%M"
+style = "blue"
+
+[nix_shell]
+symbol = "⌘ "
+style = "cyan"
+
+[direnv]
+symbol = "⌘ "
+style = "yellow"

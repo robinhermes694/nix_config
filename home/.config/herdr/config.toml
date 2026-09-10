@@ -1,23 +1,41 @@
+onboarding = false
+
+[terminal]
+default_shell = "/bin/zsh"
+new_cwd = "follow"
+
 [keys]
 prefix = "ctrl+a"
+
+reload_config = "prefix+r"
+resize_mode = "prefix+shift+r"
+
 focus_pane_left  = "prefix+h"
 focus_pane_down  = "prefix+j"
 focus_pane_up    = "prefix+k"
 focus_pane_right = "prefix+l"
+
 split_horizontal = "prefix+double_quote"
 split_vertical    = "prefix+percent"
 new_tab   = "prefix+c"
 close_tab = "prefix+ampersand"
+
+detach = ["prefix+d", "prefix+q"]
+rename_tab = "prefix+comma"
+
 workspace_picker = "prefix+w"
 goto             = "prefix+g"
-copy_mode  = "prefix+y"
-switch_window_left  = "prefix+S-Left"
-switch_window_right = "prefix+S-Right"
-new_window_same_dir = "prefix+c"
-reload_config = "prefix+r"
+previous_workspace = "prefix+left"
+next_workspace = "prefix+right"
+new_workspace = "prefix+shift+n"
+edit_scrollback = "prefix+e"
+zoom = "prefix+z"
 
 [ui]
-agent_panel_sort = "priority"
-base_index = 1
-escape_time = 1
-mouse_enabled = true
+agent_panel_sort = "spaces"
+mouse_capture = true
+tab_bar_position = "bottom"
+pane_outer_borders = false
+
+[session]
+resume_agents_on_restore = true
